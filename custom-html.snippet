@@ -1,0 +1,18 @@
+snippet webplate
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	  "http://www.w3.org/TR/html4/strict.dtd">
+	<!--
+	Copyright 2012 Canonical Ltd.  This software is licensed under the
+	GNU Affero General Public License version 3 (see the file LICENSE).
+	-->
+	<html>
+	  <head>
+		  <title>Test ${LIBRARY}</title>
+		</head>
+		<body>
+			<ul id="suites">
+				<!-- <li>lp.large_indicator.test</li> -->
+				<li>lp.${LIBRARY}.test</li>
+			</ul>
+		</body>
+	</html>
