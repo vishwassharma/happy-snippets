@@ -1,4 +1,14 @@
+# New object
 snippet obj
-	${1|object} =
-		${2|value} : ${3|value}
+	${1:object} ${2:`indent('.') ? ':' : '='`}
+		${2:value} : ${3:value}
 
+# New function
+# --
+# square = (x) -> x * x
+# ---
+# fill = (container, liquid = "coffee") ->
+#  "Filling the #{container} with #{liquid}..."
+#  ---
+snippet f(
+	${1:function} = (${2:variable}) -> ${3:/**code**/}
