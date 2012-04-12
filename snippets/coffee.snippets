@@ -95,11 +95,23 @@ snippet ##
 		${1:comment}
 	###
 
+## jquery.js coffee-script snippets
+##
+## controller
+snippet jq
+	jQuery ($) ->
+		${1:# Your code here}
+
+snippet jqplugin
+	$ = jQuery
+	$.fn.${1:myFunction} = ->
+		${2:### your code here ###}
+
 ## Backbone.js coffee-script snippets
 ##
 ## controller
-snippet con
-	class App.Router.${1:classname} extends Backbone.Router
+snippet router
+	class ${1:classname} extends Backbone.Router
 
 		routes:
 			'${2:route}': '${3:function}'
@@ -108,14 +120,14 @@ snippet con
 				${4:#function stuff here...}
 
 ## model
-snippet mod
-	class App.Models.${1:name} extends Backbone.Model
+snippet model
+	class ${1:name} extends Backbone.Model
 		
 		${2}
 
 ## view
 snippet view
-	class App.Views.${1:name} extends Backbone.View
+	class ${1:name} extends Backbone.View
 	
 		initialize: ->
 			@render()
@@ -126,8 +138,8 @@ snippet view
 			@
 
 ## collection
-snippet col
-	class App.Collections.${1:name} extends Backbone.Collection
+snippet collect
+	class ${1:name} extends Backbone.Collection
 
 		initialize: ->
 
