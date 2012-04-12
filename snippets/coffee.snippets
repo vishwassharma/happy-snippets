@@ -99,7 +99,7 @@ snippet ##
 ##
 ## controller
 snippet con
-	class App.Controllers.${1:classname} extends Backbone.Controller
+	class App.Router.${1:classname} extends Backbone.Router
 
 		routes:
 			'${2:route}': '${3:function}'
@@ -121,7 +121,7 @@ snippet view
 			@render()
 
 		render: ->
-			$(this.el).html(JST.${2:template}(model: @model))
+			this.$el.html(JST.${2:template}(model: @model))
 			${3}
 			@
 
