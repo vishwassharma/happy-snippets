@@ -106,42 +106,42 @@ snippet jqplugin
 ##
 ## controller
 snippet router
-	class ${1:App}.Router.${2:name} extends Backbone.Router
+	class ${1:name} extends Backbone.Router
 
 		routes:
-			'${3:route}': '${4:function}'
+			'${2:route}': '${3:function}'
 		
-		$4: ->
-			${5:#function stuff here...}
+		$3: ->
+			${4:#function stuff here...}
 
 ## model
 snippet model
-	class ${1:App}.Model.${2:name} extends Backbone.Model
+	class ${1:name} extends Backbone.Model
 		
-		${3:defaults} :
-			"${4:key}" : "${5:value}"
-
-
+		${2:defaults} :
+			"${3:key}" : "${4:value}"
 
 ## view
 snippet view
-	class ${1:App}.View.${2:name} extends Backbone.View
+	class ${1:name} extends Backbone.View
 	
 		initialize: ->
-			${3:@render()}
+			# code ....
+			_bindAll @ , 'render'			
+
 
 		render: ->
-			${4: #.... your code here.....}
+			${2: #.... your code here.....}
 			@
 
 ## collection
 snippet collect
-	class ${1:App}.Collection.${2:name} extends Backbone.Collection
+	class ${1:name} extends Backbone.Collection
 
 		initialize: ->
-			${3:#...your code here...}
+			${2:#...your code here...}
 
-		url: '${4:url}'
+		url: '${3:url}'
 
 # New object
 snippet obj
