@@ -151,3 +151,8 @@ snippet obj
 
 snippet cl
 	console.log ${1:something}
+	
+
+snippet define
+	define ['jquery', 'underscore', 'backbone' , ${1:'Some lib'} ], ($, _, Backbone, ${2:# ref}) ->
+		${3: # code ....}
